@@ -1,5 +1,5 @@
-FROM golang
+FROM golang:1.19
 
-RUN go get github.com/x-motemen/blogsync
+RUN go install github.com/x-motemen/blogsync@latest
 
 ENTRYPOINT [ "blogsync" ]
